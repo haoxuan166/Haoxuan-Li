@@ -1,0 +1,7 @@
+---
+title: "AI Stock Predictor"
+description: "Using LSTM to forecast stock prices"
+date: 2025-04-23
+---
+
+This project uses a recurrent neural network to predict stock prices based on historical time series data using LSTM models. Results show improved accuracy over traditional methods.

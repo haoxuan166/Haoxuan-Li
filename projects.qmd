@@ -1,0 +1,6 @@
+---
+title: "My Projects"
+listing:
+  contents: projects     # <-- 子目录路径
+  type: grid             # <-- 网格布局（也可以换成 table）
+---

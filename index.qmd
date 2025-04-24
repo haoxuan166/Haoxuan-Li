@@ -1,0 +1,13 @@
+---
+title: "HaoxuanLi"
+image: "files/profile_pic.jpg"
+about:
+  template: jolla
+  links:
+    - icon: envelope
+      href: hal183@ucsd.edu
+    - icon: linkedin
+      href: https://www.linkedin.com/in/haoxuan-li-a8a56b230/
+---
+
+Welcome to my website!
