@@ -240,7 +240,7 @@ window.Quarto = {
 </section>
 <section id="data" class="level3">
 <h3 class="anchored" data-anchor-id="data">Data</h3>
-<div id="d0252fc5" class="cell" data-execution_count="1">
+<div id="2c45b5b8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">ASUS</span><span class="ch">\\</span><span class="st">Downloads</span><span class="ch">\\</span><span class="st">blueprinty.csv"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -304,7 +304,7 @@ window.Quarto = {
 </section>
 <section id="compare-patent-counts-by-customer-status" class="level3">
 <h3 class="anchored" data-anchor-id="compare-patent-counts-by-customer-status">✅ 2. Compare patent counts by customer status</h3>
-<div id="32cc1f1c" class="cell" data-execution_count="2">
+<div id="7953e9f9" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
@@ -318,7 +318,7 @@ window.Quarto = {
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Is Customer"</span>)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\ASUS\AppData\Local\Temp\ipykernel_158096\598583040.py:11: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<pre><code>C:\Users\ASUS\AppData\Local\Temp\ipykernel_73420\598583040.py:11: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
   plt.legend(title="Is Customer")</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -329,7 +329,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="8b4637ea" class="cell" data-execution_count="3">
+<div id="62882169" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summary statistics: mean, std, count</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df.groupby(<span class="st">"iscustomer"</span>)[<span class="st">"patents"</span>].agg([<span class="st">"mean"</span>, <span class="st">"std"</span>, <span class="st">"count"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -375,7 +375,7 @@ window.Quarto = {
 <p>This pattern becomes more apparent when visualized.</p>
 <p>The summary statistics support this: the average patent count for non-customers is 3.47, while it is 4.13 for customers. Although the distributions overlap substantially, Blueprinty customers appear to have heavier tails and slightly greater variance in patent production.</p>
 <p>This preliminary evidence is consistent with the marketing team’s hypothesis that customers using Blueprinty software may be more productive in securing patents. However, other confounding factors (e.g., firm age and region) may also be driving these differences. We next examine those factors.</p>
-<div id="6bbe31af" class="cell" data-execution_count="4">
+<div id="ffd4a86e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -396,7 +396,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<div id="45bed982" class="cell" data-execution_count="5">
+<div id="b4bcd86e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Age distribution by customer status (KDE)</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>sns.kdeplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">"age"</span>, hue<span class="op">=</span><span class="st">"iscustomer"</span>, fill<span class="op">=</span><span class="va">True</span>, common_norm<span class="op">=</span><span class="va">False</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
@@ -406,7 +406,7 @@ window.Quarto = {
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Is Customer"</span>)</span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\ASUS\AppData\Local\Temp\ipykernel_158096\1229093569.py:7: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+<pre><code>C:\Users\ASUS\AppData\Local\Temp\ipykernel_73420\1229093569.py:7: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
   plt.legend(title="Is Customer")</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -436,7 +436,7 @@ window.Quarto = {
 <pre><code>poisson_loglikelihood &lt;- function(lambda, Y){
    ...
 }</code></pre>
-<div id="ae9034e7" class="cell" data-execution_count="6">
+<div id="a8d3deb3" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the log-likelihood function for Poisson(λ) given observed data Y</span></span>
@@ -445,7 +445,7 @@ window.Quarto = {
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span>np.inf  <span class="co"># log(λ) undefined for λ ≤ 0</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(y_vals <span class="op">*</span> np.log(lmbda) <span class="op">-</span> lmbda <span class="op">-</span> np.log(np.math.factorial(y_vals)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="e129ba53" class="cell" data-execution_count="7">
+<div id="b1953740" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> poisson_log_likelihood(lmbda, y_vals):</span>
@@ -453,7 +453,7 @@ window.Quarto = {
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span>np.inf</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>(y_vals <span class="op">*</span> np.log(lmbda) <span class="op">-</span> lmbda <span class="op">-</span> gammaln(y_vals <span class="op">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="27ea8745" class="cell" data-execution_count="8">
+<div id="21553044" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Use all patent counts as data</span></span>
@@ -485,7 +485,7 @@ window.Quarto = {
 <p>[ Y_i = n = Y_i = {Y} ]</p>
 <p>This confirms that the MLE for () in a Poisson distribution is simply the sample mean.</p>
 <p><em>todo: Find the MLE by optimizing your likelihood function with optim() in R or sp.optimize() in Python.</em></p>
-<div id="70cd6c29" class="cell" data-execution_count="9">
+<div id="d29b650b" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert log-likelihood to a negative form for minimization</span></span>
@@ -508,7 +508,7 @@ window.Quarto = {
 <section id="estimation-of-poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-of-poisson-regression-model">Estimation of Poisson Regression Model</h3>
 <p>Next, we extend our simple Poisson model to a Poisson Regression Model such that <span class="math inline">\(Y_i = \text{Poisson}(\lambda_i)\)</span> where <span class="math inline">\(\lambda_i = \exp(X_i'\beta)\)</span>. The interpretation is that the success rate of patent awards is not constant across all firms (<span class="math inline">\(\lambda\)</span>) but rather is a function of firm characteristics <span class="math inline">\(X_i\)</span>. Specifically, we will use the covariates age, age squared, region, and whether the firm is a customer of Blueprinty.</p>
-<div id="89afbfbf" class="cell" data-execution_count="10">
+<div id="1d8027d7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> poisson_regression_loglik(beta, X, y):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    beta <span class="op">=</span> np.asarray(beta).reshape(<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.asarray(y).astype(<span class="bu">float</span>)</span>
@@ -517,7 +517,7 @@ window.Quarto = {
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    log_lik <span class="op">=</span> np.<span class="bu">sum</span>(y <span class="op">*</span> eta <span class="op">-</span> lambdas <span class="op">-</span> gammaln(y <span class="op">+</span> <span class="dv">1</span>))</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>log_lik</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="aabb5244" class="cell" data-execution_count="11">
+<div id="a2c5c343" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -544,7 +544,7 @@ Model Family:                 Poisson   Df Model:                            7
 Link Function:                    Log   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:                -3258.1
 Date:                Wed, 07 May 2025   Deviance:                       2143.3
-Time:                        23:33:38   Pearson chi2:                 2.07e+03
+Time:                        23:35:19   Pearson chi2:                 2.07e+03
 No. Iterations:                     5   Pseudo R-squ. (CS):             0.1360
 Covariance Type:            nonrobust                                         
 ====================================================================================
@@ -561,7 +561,7 @@ region_Southwest     0.0506      0.047      1.072      0.284      -0.042       0
 ====================================================================================</code></pre>
 </div>
 </div>
-<div id="91afef69" class="cell" data-execution_count="12">
+<div id="478233f5" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>coefs <span class="op">=</span> poisson_model.params</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ses <span class="op">=</span> poisson_model.bse</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>pvals <span class="op">=</span> poisson_model.pvalues</span>
@@ -686,7 +686,7 @@ region_Southwest     0.0506      0.047      1.072      0.284      -0.042       0
 </div>
 <p>We estimated a Poisson regression model to examine whether firms that use Blueprinty software are more successful in obtaining patents. The model includes firm characteristics such as age, age squared, and region, along with a binary indicator for whether the firm is a Blueprinty customer. The coefficient on iscustomer is positive and highly statistically significant (p &lt; 0.001), with an incident rate ratio (IRR) of 1.23. This suggests that, holding other variables constant, The effect of age is also strong and positive, but the negative coefficient on age² suggests diminishing returns: as firms grow older, their patent output increases, but at a decreasing rate. Regional differences appear not to be statistically significant after accounting for age and customer status, as none of the region dummy variables show significant effects.</p>
 <p>We estimated the Poisson regression model using Python’s <code>statsmodels.GLM()</code> function with a log link and Poisson family, as suggested. This is equivalent to R’s <code>glm(..., family = poisson)</code> and provides consistent MLE estimates, standard errors, and significance tests.</p>
-<div id="147dec8b" class="cell" data-execution_count="13">
+<div id="0dfff109" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>X0 <span class="op">=</span> X.copy()</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>X1 <span class="op">=</span> X.copy()</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -747,7 +747,7 @@ Variable Definitions
 </div>
 </div>
 </div>
-<div id="5583489e" class="cell" data-execution_count="14">
+<div id="fb57f7ac" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>airbnb <span class="op">=</span> pd.read_csv(<span class="st">"C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">ASUS</span><span class="ch">\\</span><span class="st">Downloads</span><span class="ch">\\</span><span class="st">airbnb.csv"</span>) </span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>airbnb.info()</span>
@@ -891,7 +891,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="c6011ad9" class="cell" data-execution_count="15">
+<div id="6c9518e6" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -909,7 +909,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="7528d5a0" class="cell" data-execution_count="16">
+<div id="b1a7ac78" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>vars_for_model <span class="op">=</span> [</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"number_of_reviews"</span>, <span class="st">"days"</span>, <span class="st">"room_type"</span>, <span class="st">"price"</span>,</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"review_scores_cleanliness"</span>, <span class="st">"review_scores_location"</span>,</span>
@@ -1012,7 +1012,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="9c397946" class="cell" data-execution_count="17">
+<div id="89fb7850" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1034,7 +1034,7 @@ memory usage: 4.3+ MB</code></pre>
 <p>A scatter plot of number_of_reviews against days (the time since the listing was first posted) shows a clear positive relationship: listings that have been on the platform longer tend to have more reviews. This is intuitive, as older listings have had more time to accumulate customer feedback.</p>
 <p>However, we also observe some extreme outliers, with days values exceeding 30,000 (i.e., over 80 years). These are likely data errors or artifacts from date calculations and should be removed before modeling. We propose restricting the dataset to listings with fewer than 5,000 days active (approximately 13 years) to ensure data quality.</p>
 <p>This initial visualization confirms that days is a key variable in predicting the number of reviews and motivates its inclusion in the Poisson regression model.</p>
-<div id="f9beff49" class="cell" data-execution_count="18">
+<div id="60f56e7b" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>X_df_filtered <span class="op">=</span> X_df[X_df[<span class="st">"days"</span>] <span class="op">&lt;</span> <span class="dv">5000</span>]  </span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -1049,7 +1049,7 @@ memory usage: 4.3+ MB</code></pre>
 </div>
 </div>
 </div>
-<div id="9894cf9c" class="cell" data-execution_count="19">
+<div id="9c684732" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> X_df_filtered[<span class="st">"number_of_reviews"</span>]</span>
@@ -1112,7 +1112,7 @@ memory usage: 4.3+ MB</code></pre>
 <p>Variable Coefficient Std. Error p-value IRR Intercept 2.4616 0.0028 &lt;0.001 11.7237 Days 0.0005 0.0000 &lt;0.001 1.0005</p>
 <p>The coefficient on days is positive and highly statistically significant. Interpreted as an incident rate ratio (IRR), each additional day a listing is online is associated with a 0.05% increase in the expected number of reviews. This suggests that listing duration is an important driver of review accumulation, as older listings naturally have more time to attract guests and feedback.</p>
 <p>This simple model confirms the usefulness of days as a predictor and motivates its inclusion in more comprehensive models that incorporate additional listing characteristics.</p>
-<div id="e580f9d9" class="cell" data-execution_count="20">
+<div id="6f9b3280" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> X_df_filtered[<span class="st">"number_of_reviews"</span>]</span>
@@ -1135,7 +1135,7 @@ Model Family:                 Poisson   Df Model:                            8
 Link Function:                    Log   Scale:                          1.0000
 Method:                          IRLS   Log-Likelihood:            -4.9535e+05
 Date:                Wed, 07 May 2025   Deviance:                   8.6847e+05
-Time:                        23:33:38   Pearson chi2:                 1.19e+06
+Time:                        23:35:19   Pearson chi2:                 1.19e+06
 No. Iterations:                     6   Pseudo R-squ. (CS):             0.9655
 Covariance Type:            nonrobust                                         
 =============================================================================================
@@ -1153,7 +1153,7 @@ room_Shared room             -0.1243      0.009    -14.466      0.000      -0.14
 =============================================================================================</code></pre>
 </div>
 </div>
-<div id="08c62468" class="cell" data-execution_count="21">
+<div id="947eb76e" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
