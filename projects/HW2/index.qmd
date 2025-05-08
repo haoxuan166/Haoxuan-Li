@@ -18,6 +18,8 @@ However, Blueprinty has collected data on 1,500 mature (non-startup) engineering
 ### Data
 
 ```{python}
+
+
 import pandas as pd
 df = pd.read_csv("C:\\Users\\ASUS\\Downloads\\blueprinty.csv")
 df.head()
@@ -29,8 +31,10 @@ df.head()
 
 
 ```{python}
+import matplotlib.pyplot as plt
+import seaborn as sns
 sns.set(style="whitegrid")
-
+import matplotlib.pyplot as plt
 # Histogram of patent counts by customer status
 plt.figure(figsize=(10, 6))
 sns.histplot(data=df, x="patents", hue="iscustomer", kde=False, bins=30, element="step", stat="density", common_norm=False)
